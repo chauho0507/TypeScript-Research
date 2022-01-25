@@ -1,4 +1,6 @@
 type Combinable = number | string;
+// number | string: union type,
+// type Combinable: alias type
 type CombinableDescriptor = 'as-number' | 'as-text';
 
 const combine = (
@@ -12,8 +14,8 @@ const combine = (
     (typeof input1 === 'number' && typeof input2 === 'number') ||
     resultConversion === 'as-number'
   )
+    //force result to return a number
     result = +input1 + +input2;
-  //force result to return a number
   else result = input1.toString() + input2.toString();
 
   return result;
@@ -21,6 +23,8 @@ const combine = (
 
 const combineAges = combine(31, 28, 'as-number');
 const combineStringAges = combine('31', '28', 'as-number');
-const combineNames = combine(31, 28, 'as-text');
+const combineNames = combine('Chau', 'Suong', 'as-text');
 
-console.log('Force', combineStringAges);
+console.log('Ages: ', combineAges); // Ages: 59
+console.log('Force: ', combineStringAges); // Force: 59
+console.log('Name: ', combineNames); // Name: ChauSuong
