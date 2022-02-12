@@ -11,7 +11,7 @@ class Account {
   // protected wishList: string[] = [];
 
   constructor(
-    private readonly id: string, // private: in this scope can accept, outside can't, include instances. If need to access from instances and not from outside, use protected instead of private.
+    private readonly id: string, // private: in this class can accept, outside can't, include instances. If need to access from instances and not from outside, use protected instead of private.
     public name: string,
     protected role: number,
     protected wishList: string[] = []
@@ -92,15 +92,15 @@ class Shipper extends Account {
   }
 }
 
-const chauShipper = new Shipper('s1', [], '');
+const huyShipper = new Shipper('s1', [], '');
 
-chauShipper.addToWishList('Ahihi');
-chauShipper.addToWishList('Ahoho');
-chauShipper.showWishList();
+huyShipper.addToWishList('Ahihi');
+huyShipper.addToWishList('Ahoho');
+huyShipper.showWishList();
 
-chauShipper.addLocation('338 Hoang Dieu');
-chauShipper.addLocation('145 Tran Nhan Tong');
-chauShipper.showOrderLocation();
-chauShipper.lastOrderLocation = '29 Nguyen Chi Dieu';
-chauShipper.showOrderLocation();
-console.log(chauShipper.lastOrderLocation);
+huyShipper.addLocation('338 Hoang Dieu');
+huyShipper.addLocation('145 Tran Nhan Tong');
+huyShipper.showOrderLocation();
+huyShipper.lastOrderLocation = '29 Nguyen Chi Dieu';
+huyShipper.showOrderLocation();
+console.log(huyShipper.lastOrderLocation);

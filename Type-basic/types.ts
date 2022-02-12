@@ -42,18 +42,18 @@ const product: {
 };
 
 // Enum: custom type to reuse
-enum Role {
-  ADMIN,
-  USER,
-  SHIPPER,
-}
+// enum Role {
+//   ADMIN,
+//   USER,
+//   SHIPPER,
+// }
 
-const chau = {
-  name: 'Chau map',
-  age: 31,
-  hobbies: ['Gaming', 'fishing'],
-  role: Role.ADMIN,
-};
+// const chau = {
+//   name: 'Chau map',
+//   age: 31,
+//   hobbies: ['Gaming', 'fishing'],
+//   role: Role.ADMIN,
+// };
 
 let test: any;
 test = true;

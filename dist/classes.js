@@ -66,14 +66,14 @@ class Shipper extends Account {
             console.log(`Shipper don't have wishList (${productName})`);
     }
 }
-const chauShipper = new Shipper('s1', [], '');
-chauShipper.addToWishList('Ahihi');
-chauShipper.addToWishList('Ahoho');
-chauShipper.showWishList();
-chauShipper.addLocation('338 Hoang Dieu');
-chauShipper.addLocation('145 Tran Nhan Tong');
-chauShipper.showOrderLocation();
-chauShipper.lastOrderLocation = '29 Nguyen Chi Dieu';
-chauShipper.showOrderLocation();
-console.log(chauShipper.lastOrderLocation);
+const huyShipper = new Shipper('s1', [], '');
+huyShipper.addToWishList('Ahihi');
+huyShipper.addToWishList('Ahoho');
+huyShipper.showWishList();
+huyShipper.addLocation('338 Hoang Dieu');
+huyShipper.addLocation('145 Tran Nhan Tong');
+huyShipper.showOrderLocation();
+huyShipper.lastOrderLocation = '29 Nguyen Chi Dieu';
+huyShipper.showOrderLocation();
+console.log(huyShipper.lastOrderLocation);
 //# sourceMappingURL=classes.js.map

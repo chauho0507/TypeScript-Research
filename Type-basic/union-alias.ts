@@ -1,6 +1,4 @@
 type Combinable = number | string;
-// number | string: union type,
-// type Combinable: alias type
 type CombinableDescriptor = 'as-number' | 'as-text';
 
 const combine = (
@@ -9,7 +7,6 @@ const combine = (
   resultConversion: CombinableDescriptor
 ) => {
   let result: Combinable;
-
   if (
     (typeof input1 === 'number' && typeof input2 === 'number') ||
     resultConversion === 'as-number'

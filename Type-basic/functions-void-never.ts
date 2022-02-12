@@ -7,7 +7,7 @@ function printOutput(num: number): void {
 }
 function generateError(message: string, errorCode: number): never {
   throw { message, errorCode };
-  return; // <- never type not allow return
+  // return; // <- never type not allow return
 }
 
 generateError('An error occurred!', 404);
