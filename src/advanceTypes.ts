@@ -68,7 +68,6 @@ useVehicle(v1);
 useVehicle(v2);
 
 // Discriminated Unions
-
 interface Bird {
   type: 'bird';
   flyingSpeed: number;
@@ -95,3 +94,35 @@ function animalMove(animal: Animal) {
   console.log('Moving at speed: ' + speed);
 }
 animalMove({ type: 'bird', flyingSpeed: 25 });
+
+// Type casting
+
+// const userInput = <HTMLInputElement>document.getElementById('user-input')!;
+const userInput = document.getElementById('user-input')! as HTMLInputElement;
+
+userInput.value = 'Ahihi!';
+
+// Index Properties
+
+interface ErrorContainer {
+  [prop: string]: string;
+}
+
+const error: ErrorContainer = {
+  email: 'Not a valid email!',
+  userName: 'Must start with a capital character!',
+};
+
+// Function Overloads
+
+function addOverload(a: number, b: number): number;
+function addOverload(a: string, b: string): string;
+function addOverload(a: number, b: string): string;
+function addOverload(a: string, b: number): string;
+function addOverload(a: Combinable, b: Combinable) {
+  if (typeof a === 'string' || typeof b === 'string') {
+    return a.toString() + b.toString;
+  }
+  return a + b;
+}
+const addOver = addOverload(5, 5);

@@ -57,4 +57,17 @@ function animalMove(animal) {
     console.log('Moving at speed: ' + speed);
 }
 animalMove({ type: 'bird', flyingSpeed: 25 });
+const userInput = document.getElementById('user-input');
+userInput.value = 'Ahihi!';
+const error = {
+    email: 'Not a valid email!',
+    userName: 'Must start with a capital character!',
+};
+function addOverload(a, b) {
+    if (typeof a === 'string' || typeof b === 'string') {
+        return a.toString() + b.toString;
+    }
+    return a + b;
+}
+const addOver = addOverload(5, 5);
 //# sourceMappingURL=advanceTypes.js.map
